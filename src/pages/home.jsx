@@ -22,7 +22,7 @@ const Home = () => {
                     <Typography variant='h1' className='my-1'>I'm Shofhal</Typography>
                     <Typography variant="lead">I'm a Fullstack Developer based in Bandung, Indonesia. I build many web aplications from small to big scales, user friendly and good performance.</Typography>
                     <div className='buttons my-5'>
-                        <Link to='/about-me'>
+                        <Link to='/portfolio/about-me'>
                             <Button className='me-2'>More about me</Button>
                         </Link>
                         <Button variant='outlined'>Download CV</Button>

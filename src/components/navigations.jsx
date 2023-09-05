@@ -21,7 +21,7 @@ const Navigations = () => {
                 <MenuList className="flex flex-col gap-2">
                     <MenuItem className="flex items-center gap-4 py-2 pr-8 pl-2">
                         <i className="fa-solid fa-house"></i>
-                        <Link to="/">
+                        <Link to="/portfolio">
                             <Typography variant="small" className="font-normal">
                                 Home
                             </Typography>
@@ -29,7 +29,7 @@ const Navigations = () => {
                     </MenuItem>
                     <MenuItem className="flex items-center gap-4 py-2 pr-8 pl-2">
                         <i className="fa-solid fa-user"></i>
-                        <Link to="/about-me">
+                        <Link to="/portfolio/about-me">
                             <Typography variant="small" className="font-normal">
                                 About Me
                             </Typography>
@@ -37,7 +37,7 @@ const Navigations = () => {
                     </MenuItem>
                     <MenuItem className="flex items-center gap-4 py-2 pr-8 pl-2">
                         <i className="fa-solid fa-suitcase"></i>
-                        <Link to="/portfolio">
+                        <Link to="/portfolio/portfolio">
                             <Typography variant="small" className="font-normal">
                                 Portfolio
                             </Typography>
@@ -45,7 +45,7 @@ const Navigations = () => {
                     </MenuItem>
                     <MenuItem className="flex items-center gap-4 py-2 pr-8 pl-2">
                         <i className="fa-solid fa-address-book"></i>
-                        <Link to="/contact">
+                        <Link to="/portfolio/contact">
                             <Typography variant="small" className="font-normal">
                                 Contact
                             </Typography>
