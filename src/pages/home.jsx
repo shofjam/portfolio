@@ -23,7 +23,7 @@ const Home = () => {
                             <Button className='me-2'>About me</Button>
                         </Link>
                         <Link to='/portfolio/portfolio'>
-                            <Button variant='outlined'>Portfolio</Button>
+                            <Button color="amber">Portfolio</Button>
                         </Link>
                     </div>
                 </div>

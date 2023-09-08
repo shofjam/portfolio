@@ -15,7 +15,7 @@ function App() {
       <Router>
         <Navigations />
         <Routes>
-          <Route path='/portfolio' element={<Home />} />
+          <Route index path='/portfolio' element={<Home />} />
           <Route path='/portfolio/about-me' element={<AboutMe />} />
           <Route path='/portfolio/portfolio' element={<Portfolio />} />
         </Routes>

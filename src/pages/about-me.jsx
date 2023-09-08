@@ -152,15 +152,15 @@ const AboutMe = () => {
                                         <TimelineIcon className="p-0">
                                             <Avatar size="sm" src={experience.companyLogo} alt="user 1" withBorder />
                                         </TimelineIcon>
-                                        <Typography variant="h5" color="blue-gray">
+                                        <Typography variant="h5">
                                             {experience.yearFrom} - {experience.yearTo}
                                         </Typography>
                                     </TimelineHeader>
                                     <TimelineBody className="pb-8">
-                                        <Typography variant="lead" color="blue-gray">
+                                        <Typography variant="lead">
                                             {experience.role} at {experience.companyName}
                                         </Typography>
-                                        <Typography color="gray" className="font-normal text-gray-600">
+                                        <Typography className="font-normal">
                                             Projects:
                                         </Typography>
                                         <ul className='list-disc'>
