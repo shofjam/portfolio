@@ -1,14 +1,7 @@
 import React from 'react'
-import { useState } from 'react'
 import profileImage from '../assets/images/profile.jpg'
-import adaya from '../assets/images/companies/adaya.png'
-import bjg from '../assets/images/companies/bjg.png'
-import jmk from '../assets/images/companies/jmk.jpeg'
-import bmg from '../assets/images/companies/bmg.jpg'
+import { Link } from 'react-router-dom';
 import {
-    Card,
-    CardHeader,
-    CardBody,
     Button,
     Typography,
     Timeline,
@@ -21,29 +14,106 @@ import {
 } from '@material-tailwind/react'
 
 const AboutMe = () => {
-    const [count, setCount] = useState(0)
+    var data = [
+        {
+            role: "Middle .NET Developer",
+            companyName: "PT. Adaya Solusi Teknologi",
+            companyLogo: "img/companies/adaya.png",
+            yearFrom: "April 2022",
+            yearTo: "Present",
+            projects: [
+                "EBR Recipe Management - Kalbe (Pharmacy Company)",
+                "Gas Station Partnership Registration - Pertamina",
+                "LPG User Dashboards - Pertamina"
+            ]
+        },
+        {
+            role: "Frontend Developer (Freelance)",
+            companyName: "Playbook Indonesia",
+            companyLogo: "img/companies/playbook.png",
+            yearFrom: "Jan 2023",
+            yearTo: "Apr 2023",
+            projects: [
+                "Main website development"
+            ]
+        },
+        {
+            role: "Middle .NET Developer",
+            companyName: "PT. Budi Jaya Group",
+            companyLogo: "img/companies/bjg.png",
+            yearFrom: "June 2021",
+            yearTo: "March 2022",
+            projects: [
+                "Payment Gateway for Getz Pay Singapore",
+                "Stock Management System",
+                "E-Chruch (Mobile App) (discontinued by the company)"
+            ]
+        },
+        {
+            role: "Frontend Developer (Freelance)",
+            companyName: "Alkelio",
+            companyLogo: "img/companies/alkelio.png",
+            yearFrom: "Jun 2021",
+            yearTo: "Oct 2021",
+            projects: [
+                "Registration wizard"
+            ]
+        },
+        {
+            role: "Web Developer",
+            companyName: "PT. Jaringan Mega Komputasi",
+            companyLogo: "img/companies/jmk.jpeg",
+            yearFrom: "June 2021",
+            yearTo: "March 2022",
+            projects: [
+                "Transport Management System (TMS)",
+                "Speed Audit for Korlantas",
+                "SIMAN for Indonesian Ministry of Finance",
+                "Internal homepages",
+                "Internal schedulers"
+            ]
+        },
+        {
+            role: "Frontend Developer (Freelance)",
+            companyName: "Playbook Indonesia",
+            companyLogo: "img/companies/playbook.png",
+            yearFrom: "Nov 2020",
+            yearTo: "Feb 2021",
+            projects: [
+                "Main product development"
+            ]
+        },
+        {
+            role: "Middle .NET Developer",
+            companyName: "PT. Budi Jaya Group",
+            companyLogo: "img/companies/bjg.png",
+            yearFrom: "Feb 2017",
+            yearTo: "Jul 2017",
+            projects: [
+                "Employee Management System for Garuda Food"
+            ]
+        }
+    ]
 
     return (
         <>
-            <Typography variant='h1' className='my-1'>ABOUT ME</Typography>
+            <Typography variant='h2' className='my-1'>ABOUT ME</Typography>
             <Typography variant='lead' className='my-1'>I love to make people happy by simplifying their jobs with my writings</Typography>
-            <Card className="w-full max-w-[48rem] flex-row mt-10 mx-auto">
-                <CardHeader
-                    shadow={false}
-                    floated={false}
-                    className="m-0 w-2/5 shrink-0 rounded-r-none"
-                >
-                    <img
-                        src={profileImage}
-                        alt="card-image"
-                        className="h-full w-full object-cover"
-                    />
-                </CardHeader>
-                <CardBody>
+            <div className='grid md:grid-cols-2 sm:grid-cols-1 mt-10'>
+                <img
+                    src={profileImage}
+                    alt="card-image"
+                    className="h-80 w-80 rounded-full object-cover object-center shadow-xl shadow-blue-gray-900/50"
+                />
+                <div className='py-10'>
                     <ul className='text-left'>
                         <li className='grid grid-cols-2'>
                             <Typography variant='lead'>Full Name</Typography>
                             <Typography variant='lead'>Ahmad Shofhal Jamil</Typography>
+                        </li>
+                        <li className='grid grid-cols-2'>
+                            <Typography variant='lead'>Pronounce</Typography>
+                            <Typography variant='lead'>He / Him</Typography>
                         </li>
                         <li className='grid grid-cols-2'>
                             <Typography variant='lead'>Birthday</Typography>
@@ -59,112 +129,54 @@ const AboutMe = () => {
                         </li>
                         <li className='grid grid-cols-2'>
                             <Typography variant='lead'>Address</Typography>
-                            <Typography variant='lead'>Bandung, Indonesia</Typography>
+                            <Typography variant='lead'>Cipagalo Girang, Margasari, <br /> Buah Batu, Bandung, <br /> West Java, Indonesia</Typography>
                         </li>
                     </ul>
-                    <Button className='mt-5'>Download CV</Button>
-                </CardBody>
-            </Card>
+                    <Link to="/docs/Resume-Ahmad_Shofhal_Jamil.pdf" target="_blank" download>
+                        <Button className='mt-5'>Download My CV</Button>
+                    </Link>
+                </div>
+            </div>
             <div className='mt-10'>
                 <Typography variant="h3">
                     Experiences
                 </Typography>
                 <hr />
+                <div>
+                    <Timeline className='mt-10 text-left'>
+                        {
+                            data.map((experience, expIdx) => (
+                                <TimelineItem>
+                                    <TimelineConnector />
+                                    <TimelineHeader>
+                                        <TimelineIcon className="p-0">
+                                            <Avatar size="sm" src={experience.companyLogo} alt="user 1" withBorder />
+                                        </TimelineIcon>
+                                        <Typography variant="h5" color="blue-gray">
+                                            {experience.yearFrom} - {experience.yearTo}
+                                        </Typography>
+                                    </TimelineHeader>
+                                    <TimelineBody className="pb-8">
+                                        <Typography variant="lead" color="blue-gray">
+                                            {experience.role} at {experience.companyName}
+                                        </Typography>
+                                        <Typography color="gray" className="font-normal text-gray-600">
+                                            Projects:
+                                        </Typography>
+                                        <ul className='list-disc'>
+                                            {
+                                                experience.projects.map((project, idProject) => (
+                                                    <li>{project}</li>
+                                                ))
+                                            }
+                                        </ul>
+                                    </TimelineBody>
+                                </TimelineItem>
+                            ))
+                        }
+                    </Timeline>
+                </div>
             </div>
-            <Timeline className='mt-10 text-left'>
-                <TimelineItem>
-                    <TimelineConnector />
-                    <TimelineHeader>
-                        <TimelineIcon className="p-0">
-                            <Avatar size="sm" src={adaya} alt="user 1" withBorder />
-                        </TimelineIcon>
-                        <Typography variant="h5" color="blue-gray">
-                            March 2022 - Now
-                        </Typography>
-                    </TimelineHeader>
-                    <TimelineBody className="pb-8">
-                        <Typography variant="lead" color="blue-gray">
-                            Middle .NET Developer - PT. Adaya Solusi Teknologi
-                        </Typography>
-                        <Typography color="gray" className="font-normal text-gray-600">
-                            Projects:
-                        </Typography>
-                        <ul className='list-disc'>
-                            <li>EBR Recipe Management - Kalbe (Pharmacy Company)</li>
-                            <li>Gas Station Partnership Registration - Pertamina</li>
-                            <li>LPG User Dashboards - Pertamina</li>
-                        </ul>
-                    </TimelineBody>
-                </TimelineItem>
-                <TimelineItem>
-                    <TimelineConnector />
-                    <TimelineHeader>
-                        <TimelineIcon className="p-0">
-                            <Avatar size="sm" src={bjg} alt="user 2" withBorder />
-                        </TimelineIcon>
-                        <Typography variant="h5" color="blue-gray">
-                            June 2021 - March 2022
-                        </Typography>
-                    </TimelineHeader>
-                    <TimelineBody className="pb-8">
-                        <Typography variant="lead" color="blue-gray">
-                            Middle .NET Developer - PT. Budi Jaya Group
-                        </Typography>
-                        <Typography color="gray" className="font-normal text-gray-600">
-                            Projects:
-                        </Typography>
-                        <ul className='list-disc'>
-                            <li>Payment Gateway - Getz Pay Singapore</li>
-                            <li>Stock Management System - Company's Product</li>
-                            <li>E-Chruch - Company's Product (discontinued by the company)</li>
-                        </ul>
-                    </TimelineBody>
-                </TimelineItem>
-                <TimelineItem>
-                    <TimelineConnector />
-                    <TimelineHeader>
-                        <TimelineIcon className="p-0">
-                            <Avatar size="sm" src={jmk} alt="user 2" withBorder />
-                        </TimelineIcon>
-                        <Typography variant="h5" color="blue-gray">
-                            June 2021 - March 2022
-                        </Typography>
-                    </TimelineHeader>
-                    <TimelineBody className="pb-8">
-                        <Typography variant="lead" color="blue-gray">
-                            Web Developer - PT. Jaringan Mega Komputasi
-                        </Typography>
-                        <Typography color="gray" className="font-normal text-gray-600">
-                            The key to more success is to have a lot of pillows. Put it this way, it took me
-                            twenty five years to get these plants, twenty five years of blood sweat and tears, and
-                            I&apos;m never giving up, I&apos;m just getting started. I&apos;m up to something. Fan
-                            luv.
-                        </Typography>
-                    </TimelineBody>
-                </TimelineItem>
-                <TimelineItem>
-                    <TimelineConnector />
-                    <TimelineHeader>
-                        <TimelineIcon className="p-0">
-                            <Avatar size="sm" src={bmg} alt="user 2" withBorder />
-                        </TimelineIcon>
-                        <Typography variant="h5" color="blue-gray">
-                            June 2021 - March 2022
-                        </Typography>
-                    </TimelineHeader>
-                    <TimelineBody className="pb-8">
-                        <Typography variant="lead" color="blue-gray">
-                            Junior .NET Developer - PT. Bentang MitraGuna
-                        </Typography>
-                        <Typography color="gray" className="font-normal text-gray-600">
-                            The key to more success is to have a lot of pillows. Put it this way, it took me
-                            twenty five years to get these plants, twenty five years of blood sweat and tears, and
-                            I&apos;m never giving up, I&apos;m just getting started. I&apos;m up to something. Fan
-                            luv.
-                        </Typography>
-                    </TimelineBody>
-                </TimelineItem>
-            </Timeline>
         </>
     )
 }

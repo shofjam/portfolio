@@ -1,12 +1,9 @@
 import React from 'react'
-import { useState } from 'react'
 import profileImage from '../assets/images/profile.jpg'
 import { Link } from "react-router-dom";
 import { Button, Typography } from '@material-tailwind/react'
 
 const Home = () => {
-    const [count, setCount] = useState(0)
-
     return (
         <>
             <div className='grid grid-cols-1 lg:grid-cols-2 gap-4'>
@@ -18,14 +15,16 @@ const Home = () => {
                     />
                 </div>
                 <div className='introduction'>
-                    <Typography variant='h2' className='my-1'>Hello!</Typography>
-                    <Typography variant='h1' className='my-1'>I'm Shofhal</Typography>
-                    <Typography variant="lead">I'm a Fullstack Developer based in Bandung, Indonesia. I build many web aplications from small to big scales, user friendly and good performance.</Typography>
+                    <Typography variant='h3' className='my-1'>Hello!</Typography>
+                    <Typography variant='h2' className='my-1'>I'm Shofhal</Typography>
+                    <Typography variant="lead">I'm a Full-Stack Developer based in Bandung, Indonesia. I build web applications from small to big scales that focus on user friendly and best performance.</Typography>
                     <div className='buttons my-5'>
                         <Link to='/portfolio/about-me'>
-                            <Button className='me-2'>More about me</Button>
+                            <Button className='me-2'>About me</Button>
                         </Link>
-                        <Button variant='outlined'>Download CV</Button>
+                        <Link to='/portfolio/portfolio'>
+                            <Button variant='outlined'>Portfolio</Button>
+                        </Link>
                     </div>
                 </div>
             </div>
