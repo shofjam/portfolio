@@ -11,10 +11,13 @@ import {
     TimelineIcon,
     TimelineBody,
     Avatar,
+    Card,
+    CardBody,
+    Slider
 } from '@material-tailwind/react'
 
 const AboutMe = () => {
-    var data = [
+    var experiences = [
         {
             role: "Middle .NET Developer",
             companyName: "PT. Adaya Solusi Teknologi",
@@ -24,7 +27,7 @@ const AboutMe = () => {
             projects: [
                 "EBR Recipe Management - Kalbe (Pharmacy Company)",
                 "Gas Station Partnership Registration - Pertamina",
-                "LPG User Dashboards - Pertamina"
+                "LPG Station Partner Dashboards - Pertamina"
             ]
         },
         {
@@ -84,14 +87,71 @@ const AboutMe = () => {
             ]
         },
         {
-            role: "Middle .NET Developer",
-            companyName: "PT. Budi Jaya Group",
-            companyLogo: "img/companies/bjg.png",
+            role: "Junior .NET Developer",
+            companyName: "PT. Bentang MitraGuna",
+            companyLogo: "img/companies/bmg.jpg",
             yearFrom: "Feb 2017",
             yearTo: "Jul 2017",
             projects: [
                 "Employee Management System for Garuda Food"
             ]
+        }
+    ]
+
+    var skills = [
+        {
+            name: ".NET Framework/Core",
+            score: 8
+        },
+        {
+            name: "ASP.NET MVC",
+            score: 8
+        },
+        {
+            name: "ReactJS",
+            score: 7
+        },
+        {
+            name: "Bootstrap",
+            score: 7
+        },
+        {
+            name: "Angular",
+            score: 6
+        },
+        {
+            name: "jQuery",
+            score: 7
+        },
+        {
+            name: "Microsoft SQL Server",
+            score: 7
+        },
+        {
+            name: "PostgreSQL",
+            score: 6
+        },
+        {
+            name: "Microservices",
+            score: 7
+        },
+        {
+            name: "Restful API",
+            score: 7
+        },
+        {
+            name: "GIT",
+            score: 7
+        }
+    ]
+
+    var educations = [
+        {
+            school: "Bina Sarana Informatika",
+            degree: "Diploma 3",
+            field: "Informatics Management",
+            year: "2012 - 2015",
+            description: "Studied computer programming and organization management."
         }
     ]
 
@@ -103,7 +163,7 @@ const AboutMe = () => {
                 <img
                     src={profileImage}
                     alt="card-image"
-                    className="h-80 w-80 rounded-full object-cover object-center shadow-xl shadow-blue-gray-900/50"
+                    className="h-80 w-80 rounded-full object-cover object-center shadow-xl shadow-blue-gray-900/50 mx-auto"
                 />
                 <div className='py-10'>
                     <ul className='text-left'>
@@ -138,28 +198,28 @@ const AboutMe = () => {
                 </div>
             </div>
             <div className='mt-10'>
-                <Typography variant="h3">
+                <Typography variant="h3" className='pt-10 mb-2'>
                     Experiences
                 </Typography>
                 <hr />
                 <div>
-                    <Timeline className='mt-10 text-left'>
+                    <Timeline className='mt-5 text-left'>
                         {
-                            data.map((experience, expIdx) => (
+                            experiences.map((experience, idx) => (
                                 <TimelineItem>
-                                    <TimelineConnector />
+                                    <TimelineConnector className='timeline-connector' />
                                     <TimelineHeader>
-                                        <TimelineIcon className="p-0">
-                                            <Avatar size="sm" src={experience.companyLogo} alt="user 1" withBorder />
+                                        <TimelineIcon className="p-0 bg-amber">
+                                            <Avatar size="xl" src={experience.companyLogo} alt="user 1" withBorder className='border-amber' />
                                         </TimelineIcon>
                                         <Typography variant="h5">
                                             {experience.yearFrom} - {experience.yearTo}
+                                            <Typography variant="lead">
+                                                {experience.role} at {experience.companyName}
+                                            </Typography>
                                         </Typography>
                                     </TimelineHeader>
                                     <TimelineBody className="pb-8">
-                                        <Typography variant="lead">
-                                            {experience.role} at {experience.companyName}
-                                        </Typography>
                                         <Typography className="font-normal">
                                             Projects:
                                         </Typography>
@@ -176,6 +236,57 @@ const AboutMe = () => {
                         }
                     </Timeline>
                 </div>
+            </div>
+            <div className='my-10'>
+                <Typography variant="h3" className='pt-10 mb-2'>
+                    Skills
+                </Typography>
+                <hr />
+                <div>
+                    <div className='grid md:grid-cols-2 lg:grid-cols-3 sm:grid-cols-1 mt-5'>
+                        {
+                            skills.map((skill, idx) => (
+                                <Card className="mt-2 w-96 bg-amber mx-1">
+                                    <CardBody>
+                                        <Typography variant="h5" className="mb-2 text-black">
+                                            {skill.name}
+                                        </Typography>
+                                        <div className='flex'>
+                                            <Slider defaultValue={skill.score * 10} className='mt-3' value={skill.score * 10} />
+                                            <Typography variant='lead' className='ml-4 text-black'>
+                                                {skill.score}
+                                            </Typography>
+                                        </div>
+                                    </CardBody>
+                                </Card>
+                            ))
+                        }
+                    </div>
+                </div>
+            </div>
+            <div className='my-10'>
+                <Typography variant="h3" className='pt-10 mb-2'>
+                    Educations
+                </Typography>
+                <hr />
+                {
+                    educations.map((education, idx) => (
+                        <div className="text-left mt-5" key={"education-" + idx}>
+                            <Typography variant="h5" className="mb-2">
+                                {education.degree} of {education.field}
+                            </Typography>
+                            <Typography variant='lead'>
+                                {education.school}
+                                <Typography>
+                                    {education.year}
+                                </Typography>
+                            </Typography>
+                            <Typography>
+                                {education.description}
+                            </Typography>
+                        </div>
+                    ))
+                }
             </div>
         </>
     )

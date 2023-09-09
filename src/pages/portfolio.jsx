@@ -38,10 +38,10 @@ const Portfolio = () => {
             ]
         },
         {
-            projectName: "Partnership Registration for Pertamina",
+            projectName: "LPG and Gas Station Partnership for Pertamina",
             company: "PT. Adaya Solusi Teknologi",
             year: "2022",
-            description: "This web application handles partnership registration for both gas stations and LPG station for Pertamina.",
+            description: "This web application handles partnership registration for gas stations and LPG station dasboard for Pertamina.",
             technicalStack: ".NET Core, ASP.NET Core MVC, Highcharts, jQuery, RabbitMQ, Microsoft SQL Server, Stored Procedures, Microservices, GitLab",
             images: [
                 {

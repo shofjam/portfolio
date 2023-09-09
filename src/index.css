@@ -69,6 +69,31 @@ hr {
   background-color: #FFC107
 }
 
+.timeline-connector span {
+  background-color: #FFC107;
+}
+
+.text-amber {
+  color: #FFC107;
+}
+
+.bg-amber {
+  background-color: #FFC107;
+  color: white;
+}
+
+.bg-amber-30 {
+  background-color: #9E7700
+}
+
+.bg-amber-40 {
+  background-color: #D19D00
+}
+
+.border-amber {
+  border-color: #FFC107;;
+}
+
 @media (prefers-color-scheme: light) {
   :root {
     color: #222A35;
