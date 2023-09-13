@@ -17,7 +17,7 @@ import {
 } from '@material-tailwind/react'
 
 const AboutMe = () => {
-    var experiences = [
+    var fullTimeExperiences = [
         {
             role: "Middle .NET Developer",
             companyName: "PT. Adaya Solusi Teknologi",
@@ -25,19 +25,9 @@ const AboutMe = () => {
             yearFrom: "April 2022",
             yearTo: "Present",
             projects: [
-                "EBR Recipe Management - Kalbe (Pharmacy Company)",
-                "Gas Station Partnership Registration - Pertamina",
-                "LPG Station Partner Dashboards - Pertamina"
-            ]
-        },
-        {
-            role: "Frontend Developer (Freelance)",
-            companyName: "Playbook Indonesia",
-            companyLogo: "img/companies/playbook.png",
-            yearFrom: "Jan 2023",
-            yearTo: "Apr 2023",
-            projects: [
-                "Main website development"
+                "EBR (Medical Formula Mangement & Reporting System) for Kalbe",
+                "Gas Station Partnership Registration for Pertamina - Indonesian State Owned Corporation",
+                "LPG Station Partner Dashboards for Pertamina - Indonesian State Owned Corporation"
             ]
         },
         {
@@ -49,53 +39,66 @@ const AboutMe = () => {
             projects: [
                 "Payment Gateway for Getz Pay Singapore",
                 "Stock Management System",
-                "E-Chruch (Mobile App) (discontinued by the company)"
-            ]
-        },
-        {
-            role: "Frontend Developer (Freelance)",
-            companyName: "Alkelio",
-            companyLogo: "img/companies/alkelio.png",
-            yearFrom: "Jun 2021",
-            yearTo: "Oct 2021",
-            projects: [
-                "Registration wizard"
+                "E-Chruch (Mobile App)"
             ]
         },
         {
             role: "Web Developer",
             companyName: "PT. Jaringan Mega Komputasi",
             companyLogo: "img/companies/jmk.jpeg",
-            yearFrom: "June 2021",
-            yearTo: "March 2022",
+            yearFrom: "August 2017",
+            yearTo: "March 2021",
             projects: [
                 "Transport Management System (TMS)",
-                "Speed Audit for Korlantas",
-                "SIMAN for Indonesian Ministry of Finance",
+                "Speed Audit for Korlantas - Indonesian Traffic Police Dept",
+                "SIMAN for Kemenkeu - Indonesian Ministry of Finance",
                 "Internal homepages",
                 "Internal schedulers"
-            ]
-        },
-        {
-            role: "Frontend Developer (Freelance)",
-            companyName: "Playbook Indonesia",
-            companyLogo: "img/companies/playbook.png",
-            yearFrom: "Nov 2020",
-            yearTo: "Feb 2021",
-            projects: [
-                "Main product development"
             ]
         },
         {
             role: "Junior .NET Developer",
             companyName: "PT. Bentang MitraGuna",
             companyLogo: "img/companies/bmg.jpg",
-            yearFrom: "Feb 2017",
-            yearTo: "Jul 2017",
+            yearFrom: "February 2017",
+            yearTo: "July 2017",
             projects: [
                 "Employee Management System for Garuda Food"
             ]
         }
+    ]
+
+    var freelanceExperiences = [
+        {
+            role: "Frontend Developer",
+            companyName: "Playbook Indonesia",
+            companyLogo: "img/companies/playbook.png",
+            yearFrom: "January 2023",
+            yearTo: "April 2023",
+            projects: [
+                "Main website development"
+            ]
+        },
+        {
+            role: "Frontend Developer",
+            companyName: "Alkelio",
+            companyLogo: "img/companies/alkelio.png",
+            yearFrom: "June 2021",
+            yearTo: "October 2021",
+            projects: [
+                "Registration wizard"
+            ]
+        },
+        {
+            role: "Frontend Developer",
+            companyName: "Playbook Indonesia",
+            companyLogo: "img/companies/playbook.png",
+            yearFrom: "November 2020",
+            yearTo: "February 2021",
+            projects: [
+                "Main product development"
+            ]
+        },
     ]
 
     var skills = [
@@ -205,19 +208,21 @@ const AboutMe = () => {
                 <div>
                     <Timeline className='mt-5 text-left'>
                         {
-                            experiences.map((experience, idx) => (
-                                <TimelineItem>
+                            fullTimeExperiences.map((experience, idx) => (
+                                <TimelineItem key={"experience-" + idx}>
                                     <TimelineConnector className='timeline-connector' />
                                     <TimelineHeader>
                                         <TimelineIcon className="p-0 bg-amber">
                                             <Avatar size="xl" src={experience.companyLogo} alt="user 1" withBorder className='border-amber' />
                                         </TimelineIcon>
-                                        <Typography variant="h5">
-                                            {experience.yearFrom} - {experience.yearTo}
+                                        <div>
+                                            <Typography variant="h5">
+                                                {experience.yearFrom} - {experience.yearTo}
+                                            </Typography>
                                             <Typography variant="lead">
                                                 {experience.role} at {experience.companyName}
                                             </Typography>
-                                        </Typography>
+                                        </div>
                                     </TimelineHeader>
                                     <TimelineBody className="pb-8">
                                         <Typography className="font-normal">
@@ -236,6 +241,47 @@ const AboutMe = () => {
                         }
                     </Timeline>
                 </div>
+                <div>
+                    <Typography variant="h4" className='pt-10 mb-2 text-left'>
+                        Experiences as a Freelancer
+                    </Typography>
+                    <Timeline className='mt-5 text-left'>
+                        {
+                            freelanceExperiences.map((experience, idx) => (
+                                <TimelineItem key={"freelance-" + idx}>
+                                    <TimelineConnector className='timeline-connector' />
+                                    <TimelineHeader>
+                                        <TimelineIcon className="p-0 bg-amber">
+                                            <Avatar size="xl" src={experience.companyLogo} alt="user 1" withBorder className='border-amber' />
+                                        </TimelineIcon>
+                                        <div>
+                                            <Typography variant="h5">
+                                                {experience.yearFrom} - {experience.yearTo}
+                                            </Typography>
+                                            <Typography variant="lead">
+                                                {experience.role} at {experience.companyName}
+                                            </Typography>
+                                        </div>
+                                    </TimelineHeader>
+                                    <TimelineBody className="pb-8">
+                                        <Typography className="font-normal">
+                                            Projects:
+                                        </Typography>
+                                        <React.Fragment key={"freelance-project-" + idx}>
+                                            <ul className='list-disc' >
+                                                {
+                                                    experience.projects.map((project, idProject) => (
+                                                        <li key={"project-" + idx + "-" + idProject}>{project}</li>
+                                                    ))
+                                                }
+                                            </ul>
+                                        </React.Fragment>
+                                    </TimelineBody>
+                                </TimelineItem>
+                            ))
+                        }
+                    </Timeline>
+                </div>
             </div>
             <div className='my-10'>
                 <Typography variant="h3" className='pt-10 mb-2'>
@@ -246,13 +292,13 @@ const AboutMe = () => {
                     <div className='grid md:grid-cols-2 lg:grid-cols-3 sm:grid-cols-1 mt-5'>
                         {
                             skills.map((skill, idx) => (
-                                <Card className="mt-2 w-96 bg-amber mx-1">
+                                <Card className="mt-2 w-96 bg-amber mx-1" key={"skills-" + idx}>
                                     <CardBody>
                                         <Typography variant="h5" className="mb-2 text-black">
                                             {skill.name}
                                         </Typography>
                                         <div className='flex'>
-                                            <Slider defaultValue={skill.score * 10} className='mt-3' value={skill.score * 10} />
+                                            <Slider className='mt-3' value={skill.score * 10} />
                                             <Typography variant='lead' className='ml-4 text-black'>
                                                 {skill.score}
                                             </Typography>
@@ -277,9 +323,9 @@ const AboutMe = () => {
                             </Typography>
                             <Typography variant='lead'>
                                 {education.school}
-                                <Typography>
-                                    {education.year}
-                                </Typography>
+                            </Typography>
+                            <Typography variant='lead'>
+                                {education.year}
                             </Typography>
                             <Typography>
                                 {education.description}

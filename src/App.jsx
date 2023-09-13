@@ -10,9 +10,9 @@ import Contact from './pages/contact';
 function App() {
   return (
     <>
-      <div style={{ position: "absolute", right: 5, top: 5 }}>
+      {/* <div style={{ position: "absolute", right: 5, top: 5 }}>
         <Alert color='light-blue' className='py-2' icon={<i className="fa-solid fa-hammer"></i>}>This site is still under construction</Alert>
-      </div>
+      </div> */}
       <Router>
         <Navigations />
         <Routes>

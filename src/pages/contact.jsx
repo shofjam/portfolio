@@ -23,7 +23,7 @@ const Contact = () => {
         {
             media: "LinkedIn",
             address: "https://www.linkedin.com/in/shofjam",
-            url: true,
+            isUrl: true,
         },
 
     ]
@@ -36,16 +36,15 @@ const Contact = () => {
                     <CardBody>
                         {
                             contacts.map((contact, idx) => (
-                                <div key={"contact-" + idx} className='mt-5'>
+                                <div key={"contact-" + idx} className={(idx > 0 ? "mt-3" : "") + " whitespace-normal"}>
                                     <Typography>
                                         {contact.media}
                                     </Typography>
                                     {
                                         contact.isUrl ? (
-                                            <a href={contact.address} ></a>
+                                            <a href={contact.address} >Visit my profile</a>
                                         ) : (
-                                            <Typography variant='lead'>
-
+                                            <Typography>
                                                 {contact.address}
                                             </Typography>
                                         )
@@ -73,7 +72,7 @@ const Contact = () => {
                         </CardBody>
                     </Card>
                 </div>
-            </div>
+            </div >
         </>
     )
 }

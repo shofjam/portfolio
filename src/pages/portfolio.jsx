@@ -8,9 +8,22 @@ import {
     Card,
     CardHeader,
     CardBody,
+    Dialog,
+    DialogHeader,
+    DialogBody,
+    DialogFooter,
+    Avatar,
+    IconButton
 } from '@material-tailwind/react'
 
 const Portfolio = () => {
+    const [openDialog, setOpenDialog] = React.useState(false);
+    const [dialogImage, setDialogImage] = React.useState({});
+    function handleOpenDialog(img) {
+        setDialogImage(img);
+        setOpenDialog(() => !openDialog);
+    };
+
     var data = [
         {
             projectName: "EBR Recipe Management for Kalbe",
@@ -99,6 +112,28 @@ const Portfolio = () => {
                     description: "Sign Up 2"
                 },
             ]
+        },
+
+        {
+            projectName: "Transport Management System",
+            company: "Alkelio",
+            year: "2019",
+            description: "A Platform to manage the system in transportation companies",
+            technicalStack: "DevExpress, ASP.NET, jQuery, PostgreSQL, SQL Server",
+            images: [
+                {
+                    src: "img/portfolios/TMS-1.png",
+                    description: "Dashboard"
+                },
+                {
+                    src: "img/portfolios/TMS-2.png",
+                    description: "Create Order"
+                },
+                {
+                    src: "img/portfolios/TMS-3.png",
+                    description: "Create Invoice"
+                },
+            ]
         }
     ]
 
@@ -116,12 +151,12 @@ const Portfolio = () => {
                                 <Typography variant="h5" className="mb-3">
                                     {project.projectName}
                                 </Typography>
-                                <Carousel transition={{ duration: 0.5 }} className="rounded-xl h-95">
+                                <Carousel transition={{ duration: 0.5 }} className="rounded-xl h-95 cursor-pointer overflow-hidden transition-opacity hover:opacity-90">
                                     {
                                         project.images.map((projectImage, idx) => (
                                             <React.Fragment key={"project-" + index + "-image-" + idx}>
 
-                                                <figure className="relative h-full w-full">
+                                                <figure className="relative h-full w-full" onClick={() => handleOpenDialog(projectImage)}>
                                                     <img
                                                         className="w-full max-h-screen rounded-xl object-cover object-center"
                                                         src={projectImage.src}
@@ -156,6 +191,29 @@ const Portfolio = () => {
                     </React.Fragment>
                 ))}
             </div>
+            <Dialog size="xl" open={openDialog} handler={() => handleOpenDialog({})}>
+                <DialogHeader className="justify-between">
+                    <div className="flex items-center gap-3">
+                        <Typography
+                            variant="lead"
+                        >
+                            {dialogImage.description}
+                        </Typography>
+                    </div>
+                    <div className="flex items-center gap-2">
+                        <Button color="gray" size="sm" onClick={() => handleOpenDialog({})}>
+                            close
+                        </Button>
+                    </div>
+                </DialogHeader>
+                <DialogBody divider={true} className="p-0">
+                    <img
+                        alt={dialogImage.description}
+                        className="h-full w-full object-cover object-center"
+                        src={dialogImage.src}
+                    />
+                </DialogBody>
+            </Dialog>
         </>
     )
 }
