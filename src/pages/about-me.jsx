@@ -195,7 +195,7 @@ const AboutMe = () => {
                             <Typography variant='lead'>Cipagalo Girang, Margasari, <br /> Buah Batu, Bandung, <br /> West Java, Indonesia</Typography>
                         </li>
                     </ul>
-                    <Link to="/docs/Resume-Ahmad_Shofhal_Jamil.pdf" target="_blank" download>
+                    <Link to="../portfolio/docs/Resume-Ahmad_Shofhal_Jamil.pdf" target="_blank" download>
                         <Button className='mt-5'>Download My CV</Button>
                     </Link>
                 </div>
