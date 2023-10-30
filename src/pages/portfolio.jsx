@@ -1,20 +1,13 @@
 import React from 'react'
-import { useState } from 'react'
-import { Link } from "react-router-dom";
 import {
     Button,
     Typography,
     Carousel,
     Card,
-    CardHeader,
     CardBody,
     Dialog,
     DialogHeader,
-    DialogBody,
-    DialogFooter,
-    Avatar,
-    IconButton
-} from '@material-tailwind/react'
+    DialogBody} from '@material-tailwind/react'
 
 const Portfolio = () => {
     const [openDialog, setOpenDialog] = React.useState(false);
@@ -29,24 +22,44 @@ const Portfolio = () => {
             projectName: "EBR Recipe Management for Kalbe",
             company: "PT. Adaya Solusi Teknologi",
             year: "2022-2023",
-            description: "We manage the data sent from an Oracle application to a RabbitMQ pool. The data then processed for reporting needs.",
+            description: "We manage the data sent from an Oracle application to a RabbitMQ pool. The data then generated and processed for reporting needs. There are 9 services in total, including data generation, data management, reporting, authentication, and files.",
             technicalStack: ".NET Core, ASP.NET Core MVC, jQuery, RabbitMQ, Dapper, Microsoft SQL Server, Microservices, GitLab",
             images: [
                 {
                     src: "img/portfolios/EBR-Kalbe-Dashboard1.png",
-                    description: "Dashboard 1"
+                    description: "Dashboard"
                 },
                 {
                     src: "img/portfolios/EBR-Kalbe-Dashboard2.png",
-                    description: "Dashboard 2"
+                    description: "Dashboard"
                 },
                 {
                     src: "img/portfolios/EBR-Kalbe-Details.png",
-                    description: "Detail Data"
+                    description: "Data Detail"
+                },
+                {
+                    src: "img/portfolios/EBR-Kalbe-ExportToExcel.png",
+                    description: "Export to Excel"
                 },
                 {
                     src: "img/portfolios/EBR-Kalbe-PrintReport.png",
                     description: "Print Report"
+                },
+                {
+                    src: "img/portfolios/EBR-Kalbe-QRCode.png",
+                    description: "QR Code Generation"
+                },
+                {
+                    src: "img/portfolios/EBR-Kalbe-Dynamic-Approvals.png",
+                    description: "Dynamic Approvals"
+                },
+                {
+                    src: "img/portfolios/EBR-Kalbe-Tables.png",
+                    description: "Table"
+                },
+                {
+                    src: "img/portfolios/EBR-Kalbe-Master-Shift.png",
+                    description: "Master Shift"
                 }
             ]
         },
@@ -59,16 +72,53 @@ const Portfolio = () => {
             images: [
                 {
                     src: "img/portfolios/Pertamina-Dashboard.png",
-                    description: "Internal Dashboard"
+                    description: "Dashboard"
                 },
                 {
-                    src: "img/portfolios/Pertamina-SPBU-User-Registration-Verification.png",
-                    description: "Gas Station Partner Registration Verification"
+                    src: "img/portfolios/Pertamina-Dashboard2.png",
+                    description: "Dashboard"
+                },
+                {
+                    src: "img/portfolios/Pertamina-LPG-User-Registration.png",
+                    description: "LPG Registration"
+                },
+                {
+                    src: "img/portfolios/Pertamina-LPG-User-Registration2.png",
+                    description: "LPG Registration"
                 },
                 {
                     src: "img/portfolios/Pertamina-LPG-User-Verification.png",
                     description: "LPG User Verification"
+                },
+                {
+                    src: "img/portfolios/Pertamina-SPBU-Registration.png",
+                    description: "SPBU Registration"
                 }
+            ]
+        },
+        {
+            projectName: "Vetting for Pertamina",
+            company: "PT. Adaya Solusi Teknologi",
+            year: "2023",
+            description: "This web application handles ships or vessels for delivering products owned by Pertamina.",
+            technicalStack: ".NET Core, ASP.NET Core MVC, Highcharts, jQuery, RabbitMQ, Microsoft SQL Server, Stored Procedures, Microservices, GitLab",
+            images: [
+                {
+                    src: "img/portfolios/Pertamina-Vetting-Home.png",
+                    description: "Home"
+                },
+                {
+                    src: "img/portfolios/Pertamina-Vetting-Ship-Owner.png",
+                    description: "Ship Owner"
+                },
+                {
+                    src: "img/portfolios/Pertamina-Vetting-User-Registration.png",
+                    description: "User Registration"
+                },
+                {
+                    src: "img/portfolios/Pertamina-Vetting-User-Registration2.png",
+                    description: "User Registration"
+                },
             ]
         },
         {
@@ -113,10 +163,9 @@ const Portfolio = () => {
                 },
             ]
         },
-
         {
             projectName: "Transport Management System",
-            company: "Alkelio",
+            company: "PT. Jaringan Mega Komputasi",
             year: "2019",
             description: "A Platform to manage the system in transportation companies",
             technicalStack: "DevExpress, ASP.NET, jQuery, PostgreSQL, SQL Server",
@@ -134,16 +183,41 @@ const Portfolio = () => {
                     description: "Create Invoice"
                 },
             ]
-        }
+        },
     ]
 
-
+    var sampleCodes = [
+        {
+            platform: "ASP.NET MVC",
+            images: 
+            [
+                "img/portfolios/SampleCodes-ASPNET-Model.png",
+                "img/portfolios/SampleCodes-ASPNET-View.png",
+                "img/portfolios/SampleCodes-ASPNET-Controller.png",
+                "img/portfolios/SampleCodes-ASPNET-Extensions.png"
+            ]
+        },
+        {
+            platform: "ReactJS",
+            images: 
+            [
+                "img/portfolios/SampleCodes-ReactJS1.png",
+            ]
+        },
+        {
+            platform: "CSS",
+            images: 
+            [
+                "img/portfolios/SampleCodes-CSS.png",
+            ]
+        },
+    ]
 
     return (
         <>
             <Typography variant='h2' className='my-1'>PORTFOLIO</Typography>
             <Typography variant='lead' className='my-1'>Here are some projects I have completed. Some projects cannot be shown here due to the permissions.</Typography>
-            <div className='grid grid-cols-1 lg:grid-cols-2 gap-4'>
+            <div className='grid grid-cols-1 gap-4'>
                 {data.map((project, index) => (
                     <React.Fragment key={"project-" + index}>
                         <Card className="mt-10 w-full">
@@ -151,6 +225,9 @@ const Portfolio = () => {
                                 <Typography variant="h5" className="mb-3">
                                     {project.projectName}
                                 </Typography>
+                                {/* <Typography variant="h6" className="mb-3">
+                                    {project.company} ({project.year})
+                                </Typography> */}
                                 <Carousel transition={{ duration: 0.5 }} className="rounded-xl h-95 cursor-pointer overflow-hidden transition-opacity hover:opacity-90">
                                     {
                                         project.images.map((projectImage, idx) => (
@@ -214,6 +291,39 @@ const Portfolio = () => {
                     />
                 </DialogBody>
             </Dialog>
+
+            <Typography variant='h3' className='my-1'>Sample Codes</Typography>
+            <div className='grid grid-cols-1 gap-4'>
+                {sampleCodes.map((sampleCode, index) => (
+                    <React.Fragment key={"samplecode-" + index}>
+                        <Card className="mt-10 w-full">
+                            <CardBody>
+                                <Typography variant="h5" className="mb-3">
+                                    {sampleCode.platform}
+                                </Typography>
+                                <Carousel transition={{ duration: 0.5 }} className="rounded-xl h-95 cursor-pointer overflow-hidden transition-opacity hover:opacity-90">
+                                    {
+                                        sampleCode.images.map((codeImage, idx) => (
+                                            <React.Fragment key={"samplecode-" + index + "-image-" + idx}>
+                                                <figure className="relative h-full w-full">
+                                                    <img
+                                                        className="w-full max-h-screen rounded-xl object-cover object-center"
+                                                        src={codeImage}
+                                                    />
+                                                    <div className="absolute inset-0 grid h-full w-full place-items-center bg-black/25">
+                                                        <div className="w-3/4 text-center md:w-2/4">
+                                                        </div>
+                                                    </div>
+                                                </figure>
+                                            </React.Fragment>
+                                        ))
+                                    }
+                                </Carousel>
+                            </CardBody>
+                        </Card>
+                    </React.Fragment>
+                ))}
+            </div>
         </>
     )
 }
