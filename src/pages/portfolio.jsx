@@ -291,8 +291,8 @@ const Portfolio = () => {
                     />
                 </DialogBody>
             </Dialog>
-
-            <Typography variant='h3' className='my-1'>Sample Codes</Typography>
+            <hr className="mt-10" />
+            <Typography variant='h3' className='my-1 mt-5'>Sample Codes</Typography>
             <div className='grid grid-cols-1 gap-4'>
                 {sampleCodes.map((sampleCode, index) => (
                     <React.Fragment key={"samplecode-" + index}>

@@ -175,10 +175,6 @@ const AboutMe = () => {
                             <Typography variant='lead'>Ahmad Shofhal Jamil</Typography>
                         </li>
                         <li className='grid grid-cols-2'>
-                            <Typography variant='lead'>Pronounce</Typography>
-                            <Typography variant='lead'>He / Him</Typography>
-                        </li>
-                        <li className='grid grid-cols-2'>
                             <Typography variant='lead'>Birthday</Typography>
                             <Typography variant='lead'>April 28th 1993</Typography>
                         </li>
@@ -196,7 +192,7 @@ const AboutMe = () => {
                         </li>
                     </ul>
                     <Link to="../portfolio/docs/Resume-Ahmad_Shofhal_Jamil.pdf" target="_blank" download>
-                        <Button className='mt-5'>Download My CV</Button>
+                        <Button className='mt-5'>Download My Resume</Button>
                     </Link>
                 </div>
             </div>
