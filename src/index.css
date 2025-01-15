@@ -20,12 +20,12 @@
 
 a {
   font-weight: 500;
-  /* color: #FFC107; */
+  /* color: #AD8202; */
   text-decoration: inherit;
 }
 
 a:hover {
-  /* color: #FFC107; */
+  /* color: #AD8202; */
 }
 
 body {
@@ -54,7 +54,7 @@ button {
 }
 
 button:hover {
-  border-color: #FFC107;
+  border-color: #AD8202;
 }
 
 button:focus,
@@ -65,20 +65,20 @@ button:focus-visible {
 hr {
   height: 2px;
   border-width: 0;
-  color: #FFC107;
-  background-color: #FFC107
+  color: #AD8202;
+  background-color: #AD8202
 }
 
 .timeline-connector span {
-  background-color: #FFC107;
+  background-color: #AD8202;
 }
 
 .text-amber {
-  color: #FFC107;
+  color: #AD8202;
 }
 
 .bg-amber {
-  background-color: #FFC107;
+  background-color: #AD8202;
   color: white;
 }
 
@@ -91,7 +91,7 @@ hr {
 }
 
 .border-amber {
-  border-color: #FFC107;;
+  border-color: #AD8202;;
 }
 
 @media (prefers-color-scheme: light) {
@@ -101,7 +101,7 @@ hr {
   }
 
   a:hover {
-    color: #FFC107;
+    color: #AD8202;
   }
 
   button {
@@ -116,7 +116,7 @@ hr {
   }
 
   a:hover {
-    color: #FFC107;
+    color: #AD8202;
   }
 
   button {

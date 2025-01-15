@@ -227,7 +227,7 @@ const AboutMe = () => {
                                         <ul className='list-disc'>
                                             {
                                                 experience.projects.map((project, idProject) => (
-                                                    <li>{project}</li>
+                                                    <li key={"experience-" + idx + '-project-'+ idProject}>{project}</li>
                                                 ))
                                             }
                                         </ul>

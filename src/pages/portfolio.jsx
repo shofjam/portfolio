@@ -19,6 +19,27 @@ const Portfolio = () => {
 
     var data = [
         {
+            projectName: "TMS Global Logistics ID",
+            company: "PT. Jaringan Mega Komputasi",
+            year: "2024",
+            description: "Logistic Platform",
+            technicalStack: "Blazor, Fluent UI, DevExpress, PostgreSQL",
+            images: [
+                {
+                    src: "img/portfolios/TMS-Blazor-1.png",
+                    description: "Login"
+                },
+                {
+                    src: "img/portfolios/TMS-Blazor-2.png",
+                    description: "Create Order"
+                },
+                {
+                    src: "img/portfolios/TMS-Blazor-3.png",
+                    description: "Add Item Popup"
+                },
+            ]
+        },
+        {
             projectName: "EBR Recipe Management for Kalbe",
             company: "PT. Adaya Solusi Teknologi",
             year: "2022-2023",
@@ -225,9 +246,6 @@ const Portfolio = () => {
                                 <Typography variant="h5" className="mb-3">
                                     {project.projectName}
                                 </Typography>
-                                {/* <Typography variant="h6" className="mb-3">
-                                    {project.company} ({project.year})
-                                </Typography> */}
                                 <Carousel transition={{ duration: 0.5 }} className="rounded-xl h-95 cursor-pointer overflow-hidden transition-opacity hover:opacity-90">
                                     {
                                         project.images.map((projectImage, idx) => (
@@ -247,9 +265,6 @@ const Portfolio = () => {
                                                             <Typography variant="h5">
                                                                 {projectImage.description}
                                                             </Typography>
-                                                            {/* <Typography color="gray" className="mt-2 font-normal">
-                                                            {projectImage.description}
-                                                        </Typography> */}
                                                         </div>
                                                     </figcaption>
                                                 </figure>
