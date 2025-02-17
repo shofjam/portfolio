@@ -1,4 +1,3 @@
-import React from 'react'
 import profileImage from '../assets/images/profile.jpg'
 import { Link } from "react-router-dom";
 import { Button, Typography } from '@material-tailwind/react'
@@ -16,8 +15,8 @@ const Home = () => {
                 </div>
                 <div className='introduction'>
                     <Typography variant='h3' className='my-1'>Hello!</Typography>
-                    <Typography variant='h2' className='my-1'>I'm Shofhal</Typography>
-                    <Typography variant="lead">I'm a Full-Stack Developer based in Bandung, Indonesia. I build web applications from small to big scales that focus on user friendly and best performance.</Typography>
+                    <Typography variant='h2' className='my-1'>I&apos;m Shofhal</Typography>
+                    <Typography variant="lead">I&apos;m a Full-Stack Developer based in Sumedang, Indonesia. I build web applications from small to big scales that focus on user friendly and best performance.</Typography>
                     <div className='buttons my-5'>
                         <Link to='/portfolio/about-me'>
                             <Button className='me-2'>About me</Button>

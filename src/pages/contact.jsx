@@ -1,6 +1,3 @@
-import React from 'react'
-import profileImage from '../assets/images/profile.jpg'
-import { Link } from 'react-router-dom';
 import {
     Button,
     Typography,
