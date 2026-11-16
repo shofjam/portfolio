@@ -22,7 +22,7 @@ const Contact = () => (
         </div>
         <div className="flex flex-wrap gap-2">
           <a className="inline-flex min-h-12 items-center justify-center gap-2 rounded-full bg-accent px-[18px] text-sm font-extrabold text-ink transition-colors hover:bg-paper" href="mailto:shoval.jamil@gmail.com">Send an email <span aria-hidden="true">↗</span></a>
-          <a className="inline-flex min-h-12 items-center justify-center gap-2 rounded-full border border-line-strong px-[18px] text-xs font-extrabold text-paper transition-colors hover:border-accent hover:text-accent" href="https://www.linkedin.com/in/shofjam" target="_blank" rel="noreferrer">LinkedIn <span aria-hidden="true">↗</span></a>
+          <a className="inline-flex min-h-12 items-center justify-center gap-2 rounded-full border border-line-strong px-[18px] text-sm font-extrabold text-paper transition-colors hover:border-accent hover:text-accent" href="https://www.linkedin.com/in/shofjam" target="_blank" rel="noreferrer">LinkedIn <span aria-hidden="true">↗</span></a>
         </div>
       </div>
       <div className="grid grid-cols-3 gap-5 pt-14 max-[560px]:grid-cols-1">

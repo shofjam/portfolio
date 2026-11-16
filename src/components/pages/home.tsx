@@ -17,19 +17,20 @@ const Home = () => (
             <Link className="inline-flex min-h-12 items-center justify-center gap-2 rounded-full bg-accent px-[18px] text-sm font-extrabold text-ink transition-colors hover:bg-paper focus-visible:bg-paper" href="/work">
               Explore my work <span aria-hidden="true">↗</span>
             </Link>
-            <Link className="inline-flex items-center gap-2 text-xs font-extrabold text-paper transition-colors hover:text-accent focus-visible:text-accent" href="/about-me">
+            <Link className="inline-flex items-center gap-2 text-sm font-extrabold text-paper transition-colors hover:text-accent focus-visible:text-accent" href="/about-me">
               More about me <span aria-hidden="true">→</span>
             </Link>
           </div>
         </div>
         <div className="relative pt-5 max-[820px]:max-w-[440px] max-[820px]:pt-0">
           <div className="relative grid min-h-[360px] place-items-center overflow-hidden rounded-[180px_180px_24px_24px] border border-line-strong bg-[linear-gradient(140deg,rgba(214,243,106,0.3),transparent_45%),linear-gradient(20deg,#1c2940,#182031)]]">
-            <div className="z-[1] font-display text-[7rem] font-semibold tracking-[-0.14em] text-paper">SJ</div>
-            <span className="absolute bottom-[22px] z-[1] text-base tracking-[0.04em] text-paper">Available for thoughtful work</span>
+            <div className="z-[1] font-display text-[7rem] font-semibold tracking-[-0.14em] text-paper">
+              <img src="/portfolio/me.jpeg" alt="Shofhal Jamil" className="w-full h-full object-cover" />
+            </div>
           </div>
-          <div className="mt-6 flex gap-3 pl-7 text-xs leading-6 text-muted">
+          <div className="mt-6 flex gap-3 text-base leading-6 text-muted">
             <span className="mt-2 h-px w-7 shrink-0 bg-accent" />
-            <p className="max-w-[210px]">From backend architecture to the last interaction, I care about the details that make software last.</p>
+            <p className="max-w-100">From backend architecture to the last interaction, I care about the details that make software last.</p>
           </div>
         </div>
       </div>
@@ -80,7 +81,7 @@ const Home = () => (
         <div>
           <h2 className="font-display text-[clamp(2.7rem,6vw,5.8rem)] leading-[0.95] tracking-[-0.08em]">Make the hard things feel <span className="text-orange">simple.</span></h2>
           <p className="my-7 max-w-[560px] text-base leading-7 text-ink/70">The best interfaces are the visible result of invisible care: strong foundations, useful constraints, and a clear understanding of the people on the other side of the screen.</p>
-          <Link className="inline-flex items-center gap-2 text-xs font-extrabold text-ink" href="/contact">Start a conversation <span aria-hidden="true">→</span></Link>
+          <Link className="inline-flex items-center gap-2 text-sm font-extrabold text-ink" href="/contact">Start a conversation <span aria-hidden="true">→</span></Link>
         </div>
       </div>
     </section>
