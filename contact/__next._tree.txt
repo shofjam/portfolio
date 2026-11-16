@@ -1,0 +1,4 @@
+:HL["/portfolio/_next/static/chunks/0ldxp77xhh77b.css","style"]
+2:[["children",{"s":"__PAGE__","h":160}]]
+1:[["children",{"s":"contact","h":96,"c":"$Q2"}]]
+0:{"b":"8lAygDvBNCCMG5Br14xTi","t":{"t":{"s":"","h":80,"c":"$Q1"}}}

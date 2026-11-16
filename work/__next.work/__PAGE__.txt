@@ -1,0 +1,34 @@
+1:"$Sreact.fragment"
+2:"/portfolio/_next/static/chunks/08mika-44sn50.js"
+3:I[22016,["$2"],""]
+4:I[39756,["$2"],"default"]
+5:I[37457,["$2"],"default"]
+:HL["/portfolio/_next/static/chunks/0ldxp77xhh77b.css","style"]
+9:X
+d:X
+d:C
+e:[["children",{"s":"__PAGE__","h":160,"d":{"r":"$Lf","p":"$@10","v":null,"s":"$9"}}]]
+a:[["children",{"s":"work","h":96,"d":{"r":"$Lb","p":"$@c","v":"$d","s":"$9"},"c":"$Qe"}]]
+0:{"t":{"t":{"s":"","h":80,"d":{"r":["$","$1","c",{"children":[[["$","link","0",{"rel":"stylesheet","href":"/portfolio/_next/static/chunks/0ldxp77xhh77b.css","precedence":"next"}],["$","script","script-0",{"src":"/portfolio/_next/static/chunks/08mika-44sn50.js","async":true}]],["$","html",null,{"lang":"en","children":["$","body",null,{"children":["$","div",null,{"className":"flex flex-col bg-ink text-paper","children":[["$","header",null,{"className":"sticky top-0 z-10 border-b border-line bg-ink/90 backdrop-blur-lg","children":["$","div",null,{"className":"mx-auto flex min-h-[78px] w-[min(1120px,calc(100%-40px))] items-center justify-between gap-6 max-[720px]:flex-wrap max-[720px]:py-3","children":[["$","$L3",null,{"className":"inline-flex items-center gap-3 text-paper","href":"/","aria-label":"Shofhal Jamil home","children":[["$","span",null,{"className":"grid size-[38px] place-items-center rounded-xl bg-accent text-xs font-extrabold tracking-[-0.04em] text-ink","children":"SJ"}],["$","span",null,{"children":[["$","strong",null,{"className":"block text-sm","children":"Shofhal Jamil"}],["$","small",null,{"className":"mt-0.5 block text-sm uppercase tracking-[0.04em] text-muted","children":"Full-stack developer"}]]}]]}],["$","nav",null,{"className":"flex items-center gap-7 max-[720px]:order-3 max-[720px]:w-full max-[720px]:justify-between max-[720px]:gap-3","aria-label":"Primary navigation","children":[["$","$L3","/",{"className":"text-base font-bold tracking-[0.02em] text-muted transition-colors hover:text-paper focus-visible:text-paper max-[720px]:text-[0.74rem]","href":"/","children":"Home"}],["$","$L3","/about-me",{"className":"text-base font-bold tracking-[0.02em] text-muted transition-colors hover:text-paper focus-visible:text-paper max-[720px]:text-[0.74rem]","href":"/about-me","children":"About"}],["$","$L3","/work",{"className":"text-base font-bold tracking-[0.02em] text-muted transition-colors hover:text-paper focus-visible:text-paper max-[720px]:text-[0.74rem]","href":"/work","children":"Work"}],["$","$L3","/contact",{"className":"text-base font-bold tracking-[0.02em] text-muted transition-colors hover:text-paper focus-visible:text-paper max-[720px]:text-[0.74rem]","href":"/contact","children":"Contact"}]]}],["$","$L3",null,{"className":"rounded-full border border-line-strong px-4 py-2.5 text-xs font-bold text-paper transition-colors hover:border-accent hover:text-accent focus-visible:border-accent focus-visible:text-accent max-[720px]:hidden","href":"/contact","children":["Let's talk ",["$","span",null,{"aria-hidden":"true","children":"↗"}]]}]]}]}],["$","main",null,{"className":"flex-1","children":["$","$L4",null,{"parallelRouterKey":"children","template":["$","$L5",null,{}],"notFound":[[["$","title",null,{"children":"404: This page could not be found."}],["$","div",null,{"style":{"fontFamily":"system-ui,\"Segoe UI\",Roboto,Helvetica,Arial,sans-serif,\"Apple Color Emoji\",\"Segoe UI Emoji\"","height":"100vh","textAlign":"center","display":"flex","flexDirection":"column","alignItems":"center","justifyContent":"center"},"children":["$","div",null,{"children":[["$","style",null,{"dangerouslySetInnerHTML":{"__html":"body{color:#000;background:#fff;margin:0}.next-error-h1{border-right:1px solid rgba(0,0,0,.3)}@media (prefers-color-scheme:dark){body{color:#fff;background:#000}.next-error-h1{border-right:1px solid rgba(255,255,255,.3)}}"}}],["$","h1",null,{"className":"next-error-h1","style":{"display":"inline-block","margin":"0 20px 0 0","padding":"0 23px 0 0","fontSize":24,"fontWeight":500,"verticalAlign":"top","lineHeight":"49px"},"children":404}],["$","div",null,{"style":{"display":"inline-block"},"children":["$","h2",null,{"style":{"fontSize":14,"fontWeight":400,"lineHeight":"49px","margin":0},"children":"This page could not be found."}]}]]}]}]],[]]}]}],["$","footer",null,{"className":"mt-2 border-t border-line text-sm text-muted","children":["$","div",null,{"className":"mx-auto flex min-h-[50px] w-[min(1120px,calc(100%-40px))] items-center justify-between gap-6 max-[720px]:flex-col max-[720px]:items-start max-[720px]:justify-center max-[720px]:gap-1","children":["$L6","$L7"]}]}]]}]}]}]]}],"p":"$@8","v":null,"s":"$9"},"c":"$Qa"},"h":{"r":"$L11","p":"$@12","v":null,"s":"$9"}},"a":"$@13","u":"$@14","b":"8lAygDvBNCCMG5Br14xTi"}
+15:"/portfolio/_next/static/chunks/10r1dpm7lzwg6.js"
+16:I[36312,["$2","$15"],"default"]
+17:I[97367,["$2"],"OutletBoundary"]
+18:"$Sreact.suspense"
+1a:"ViewportBoundary"
+1b:I[97367,["$2"],"$1a"]
+1c:"MetadataBoundary"
+1d:I[97367,["$2"],"$1c"]
+6:["$","span",null,{"children":["© ",2026," Shofhal Jamil"]}]
+7:["$","span",null,{"children":"Designed & built with care."}]
+b:["$","$1","c",{"children":[null,["$","$L4",null,{"parallelRouterKey":"children","template":["$","$L5",null,{}]}]]}]
+f:["$","$1","c",{"children":[["$","$L16",null,{}],[["$","script","script-0",{"src":"/portfolio/_next/static/chunks/10r1dpm7lzwg6.js","async":true}]],["$","$L17",null,{"children":["$","$18",null,{"name":"Next.MetadataOutlet","children":"$@19"}]}]]}]
+11:["$","$1","h",{"children":[null,["$","$L1b",null,{"children":[["$","meta","0",{"charSet":"utf-8"}],["$","meta","1",{"name":"viewport","content":"width=device-width, initial-scale=1"}]]}],["$","$L1d",null,{"children":[["$","div",null,{"hidden":true,"children":["$","$18",null,{"name":"Next.Metadata","children":[["$","title","0",{"children":"Shofhal Jamil — Full-stack developer"}],["$","meta","1",{"name":"description","content":"The portfolio of Ahmad Shofhal Jamil, a full-stack developer specializing in resilient web products."}]]}]}],null]}],null]}]
+19:null
+14:true
+9:300
+9:C
+13:0
+c:"$undefined"
+12:"$undefined"
+10:"$undefined"
+8:"$undefined"
