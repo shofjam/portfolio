@@ -9,7 +9,7 @@
     "build": "next build",
     "lint": "eslint . --ext js,jsx,ts,tsx --report-unused-disable-directives --max-warnings 0",
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d out"
+    "deploy": "gh-pages -d out --nojekyll"
   },
   "dependencies": {
     "next": "^16.4.6",
