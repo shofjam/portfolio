@@ -11,7 +11,7 @@ const compat = new FlatCompat({
 });
 
 export default [
-  { ignores: ['dist', '.eslintrc.cjs'] },
+  { ignores: ['dist', 'out', '.next', '.eslintrc.cjs'] },
   ...compat.config({
     env: { browser: true, es2020: true },
     extends: [

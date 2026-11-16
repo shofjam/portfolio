@@ -1,0 +1,53 @@
+@import "tailwindcss";
+
+@source "../app";
+@source "../src";
+
+@theme {
+  --color-ink: #0c111d;
+  --color-ink-soft: #121a2a;
+  --color-paper: #f5f1e8;
+  --color-muted: #9ba6b7;
+  --color-line: rgba(245, 241, 232, 0.12);
+  --color-line-strong: rgba(245, 241, 232, 0.25);
+  --color-accent: #d6f36a;
+  --color-orange: #ff8f70;
+  --font-sans: "DM Sans", Inter, system-ui, sans-serif;
+  --font-display: "Space Grotesk", Inter, system-ui, sans-serif;
+}
+
+@layer base {
+  :root {
+    color-scheme: dark;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    min-width: 320px;
+    margin: 0;
+    background: #0c111d;
+    color: #f5f1e8;
+    font-family: "DM Sans", Inter, system-ui, sans-serif;
+  }
+
+  *,
+  ::before,
+  ::after {
+    box-sizing: border-box;
+  }
+
+  h1,
+  h2,
+  h3,
+  p {
+    margin: 0;
+  }
+
+  a,
+  button {
+    -webkit-tap-highlight-color: transparent;
+  }
+}
