@@ -1,3 +1,4 @@
-:HL["/portfolio/_next/static/chunks/0ldxp77xhh77b.css","style"]
+:HL["/portfolio/_next/static/chunks/1inlsh3xv5dx5.css","style"]
+:HL["/portfolio/assets/profile-9ad0116e.jpg","image"]
 1:[["children",{"s":"__PAGE__","h":160}]]
-0:{"b":"8lAygDvBNCCMG5Br14xTi","t":{"t":{"s":"","h":80,"c":"$Q1"}}}
+0:{"b":"fHLB9WFB7B1zoD01ELLB-","t":{"t":{"s":"","h":80,"c":"$Q1"}}}
